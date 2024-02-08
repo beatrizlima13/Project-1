@@ -1,0 +1,80 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://i.imgur.com/jkyIBB6.gif');
+    background-size:100% 1000px;
+    background-repeat: no-repeat;
+}
+
+.header {
+    text-align: center;
+}
+#buttonContainer {
+    display:flex;
+    justify-content: center;
+}
+#feedButton, #restButton, #playButton {
+    display: inline-block;
+    align-items: center;
+    background-color: pink;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 10px;
+
+
+}
+#restButton {
+    display: inline-block;
+    align-items: center;
+    background-color: pink;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 10px;
+
+}
+
+#playButton {
+    display: inline-block;
+    align-items: center;
+    background-color: pink;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 10px;
+
+}
+
+h1 {
+    color: hotpink;
+    font-weight: bold;
+    font-size: 80px;
+    font-family: "Rubik Bubbles", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+#petImage {
+   height:100px;
+   width: 100px;
+}
+
+#healthContainer {
+    font-family: "Sixtyfour", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "BLED" 0,
+      "SCAN" 0; 
+      color: plum;
+      background-color: pink;
+}
