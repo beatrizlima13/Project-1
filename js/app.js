@@ -100,30 +100,6 @@ restButton.addEventListener("click", function () {
 document.getElementById('feedButton').addEventListener('click', feedPet);
 document.getElementById('playButton').addEventListener('click', playWithPet);
 document.getElementById('restButton').addEventListener('click', petRest);
-// setInterval(() => {
-//     petHappiness -= 10;
-//     if (petHappiness < 0) {
-//         petHappiness = 0;
-//     }
-//     document.getElementById("happiness").textContent = petHappiness;
-//     console.log();
-// }, 2000);
-// setInterval(() => {
-//     petHunger -= 10;
-//     if (petHunger < 0) {
-//         petHunger = 0;
-//     }
-//     document.getElementById("hunger").textContent = petHunger;
-//     console.log();
-// }, 2000);
-// setInterval(() => {
-//     petEnergy -= 10;
-//     if (petEnergy < 0) {
-//         petEnergy = 0;
-//     }
-//     document.getElementById("energy").textContent = petEnergy;
-//     console.log();
-// }, 2000);
 setInterval(() => {
     petHappiness -= 10;
     if (petHappiness < 0) {
