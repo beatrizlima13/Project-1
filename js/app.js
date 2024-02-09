@@ -1,14 +1,15 @@
-let petHappiness = 0;
+let petHappiness = 100;
 let petHunger = 100;
-let petEnergy = 0;
+let petEnergy = 100;
 ///start game
 
 function feedPet() {
-    petHunger -= 5;
+    petHunger += 5;
     if (petHunger < 0) {
         petHunger = 0;
     }
     else if (petHunger > 100) {
+
         petHunger = 100;
     }
     document.getElementById('hunger').textContent = petHunger;
@@ -94,36 +95,77 @@ restButton.addEventListener("click", function () {
         image.src = originalImageSrc;
     }, 1500);
 });
-//var playButton = document.getElementById("playButton");
-//playButton.addEventListener("click", function() {
- // playSound("https://audio.com/bia-5/audio/cute-oink");
-//});
 
 // Add event listeners for the buttons
 document.getElementById('feedButton').addEventListener('click', feedPet);
 document.getElementById('playButton').addEventListener('click', playWithPet);
 document.getElementById('restButton').addEventListener('click', petRest);
+// setInterval(() => {
+//     petHappiness -= 10;
+//     if (petHappiness < 0) {
+//         petHappiness = 0;
+//     }
+//     document.getElementById("happiness").textContent = petHappiness;
+//     console.log();
+// }, 2000);
+// setInterval(() => {
+//     petHunger -= 10;
+//     if (petHunger < 0) {
+//         petHunger = 0;
+//     }
+//     document.getElementById("hunger").textContent = petHunger;
+//     console.log();
+// }, 2000);
+// setInterval(() => {
+//     petEnergy -= 10;
+//     if (petEnergy < 0) {
+//         petEnergy = 0;
+//     }
+//     document.getElementById("energy").textContent = petEnergy;
+//     console.log();
+// }, 2000);
 setInterval(() => {
-    petHappiness -= 1;
+    petHappiness -= 10;
     if (petHappiness < 0) {
         petHappiness = 0;
     }
     document.getElementById("happiness").textContent = petHappiness;
-    console.log();
-}, 5000);
+    checkGameOver();
+}, 2000);
+
 setInterval(() => {
-    petHunger += 1;
-    if (petHunger > 100) {
-        petHunger = 100;
+    petHunger -= 10;
+    if (petHunger < 0) {
+        petHunger = 0;
     }
     document.getElementById("hunger").textContent = petHunger;
-    console.log();
-}, 5000);
+    checkGameOver();
+}, 2000);
+
 setInterval(() => {
-    petEnergy -= 1;
+    petEnergy -= 10;
     if (petEnergy < 0) {
         petEnergy = 0;
     }
     document.getElementById("energy").textContent = petEnergy;
-    console.log();
-}, 5000);
+    checkGameOver();
+}, 2000);
+
+function checkGameOver() {
+    if ((petHunger === 0 && petHappiness === 0) || (petHunger === 0 && petEnergy === 0) || (petHappiness === 0 && petEnergy === 0)) {
+        document.getElementById("gameOver").textContent = "Game Over";
+
+
+        // Display game over message on screen
+        document.getElementById("gameOver").textContent = "Game Over! Your pet has passed away.";
+
+        // Disable the buttons
+        document.getElementById("feedButton").disabled = true;
+        document.getElementById("playButton").disabled = true;
+        document.getElementById("restButton").disabled = true;
+
+        // Change the image source to the image representing a passed away pet
+        petImage.src = "https://i.imgur.com/4teGCug.png";
+
+    }
+}
