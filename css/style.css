@@ -4,67 +4,53 @@ body {
     align-items: center;
     justify-content: center;
     background-image: url('https://i.imgur.com/j59f7TE.gif');
-    background-size:100% 1000px;
+    background-size: 100% 1000px;
     background-repeat: no-repeat;
 }
 
 .header {
     text-align: center;
 }
+
 #buttonContainer {
-    display:flex;
+    display: flex;
     justify-content: center;
 }
-#feedButton, #restButton, #playButton {
-    display: inline-block;
-    align-items: center;
-    background-color: pink;
-    color: #ffffff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    margin: 10px;
 
-
-}
-#restButton {
-    display: inline-block;
-    align-items: center;
-    background-color: pink;
-    color: #ffffff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    margin: 10px;
-
-}
-
+#feedButton,
+#restButton,
 #playButton {
     display: inline-block;
     align-items: center;
     background-color: pink;
     color: #ffffff;
     padding: 10px 20px;
-    border: none;
+    border: solid black;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 20px;
     margin: 10px;
-
+    text-align: center;
+    font-family: "Single Day", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
+
+
+
+
 
 h1 {
     color: hotpink;
     font-weight: bold;
     font-size: 80px;
     font-family: "Rubik Bubbles", system-ui;
-  font-weight: 400;
-  font-style: normal;
+    font-weight: 400;
+    font-style: normal;
 }
+
 #petImage {
-   height:100px;
-   width: 100px;
+    height: 100px;
+    width: 100px;
 }
 
 #healthContainer {
@@ -73,8 +59,98 @@ h1 {
     font-weight: 400;
     font-style: normal;
     font-variation-settings:
-      "BLED" 0,
-      "SCAN" 0; 
-      color: plum;
-      background-color: pink;
+        "BLED" 0,
+        "SCAN" 0;
+    color: plum;
+    background-color: pink;
+    border:solid black;
+    border-radius:10px;
+    text-align: center;
+}
+
+#startPage {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+#gamePage {
+    display: none;
+
+}
+
+#petName {
+    font-family: "Single Day", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 80px;
+    color:palevioletred;
+    padding:100px 0 0 0;
+
+}
+
+#startButton {
+    height: 80px;
+    width: 100px;
+    background-color: pink;
+    color: black;
+    display: block;
+    margin:0 auto;
+    margin-top: 10px;
+    font-size: 25px;
+    
+}
+
+#startForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#nameInput {
+    font-family: "Single Day", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color:palevioletred;
+    width:350px;
+    height: 20px;
+    background-color:beige;
+    font-size: 30px;
+}
+.petName{
+    color: palevioletred;
+    font-family: "Single Day", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 70px;
+   display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px 0 10px 0;
+}
+#resetButton {
+    padding: 30px;
+    text-align: center;
+    border-radius: 50%;
+    margin-top: 100px;
+    height: 100px;
+    width: 175px;
+    background-color: lightpink;
+    color:#ffffff;
+    font-size: 30px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Single Day", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+#petImage2{
+    padding-top: 100px;
+    height: 100px;
+    width: 100px;
+    margin-bottom: 0;
 }
